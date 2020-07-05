@@ -1,0 +1,4 @@
+#+TITLE: Readme
+#+STARTUP: overview
+
+Serving open-source fonts from [[https://vercel.com/][Vercel]]'s global CDN.
