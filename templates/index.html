@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Fonts</title>
+        <meta name="description" content="An open-source fonts CDN powered by Vercel.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ get_url( path = 'main.css' ) | safe }}">
+    </head>
+    <body>
+        <main>
+            {% if section.content %}
+                <header>
+                    <h1>{{ section.title }}</h1>
+                    <p>{{ section.content | safe }}</p>
+                </header>
+            {% endif %}
+        </main>
+    </body>
+</html>
