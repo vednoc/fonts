@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Monoid';
+    src: url('/src/monoid/Monoid-Regular.woff2') format('woff2'),
+         url('/src/monoid/Monoid-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Monoid';
+    src: url('/src/monoid/Monoid-Italic.woff2') format('woff2'),
+         url('/src/monoid/Monoid-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Monoid';
+    src: url('/src/monoid/Monoid-Bold.woff2') format('woff2'),
+         url('/src/monoid/Monoid-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
