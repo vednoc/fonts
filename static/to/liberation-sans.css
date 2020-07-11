@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Liberation Sans';
+    src: url('/src/liberation-serif/LiberationSans.woff2') format('woff2'),
+         url('/src/liberation-serif/LiberationSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberation Sans';
+    src: url('/src/liberation-serif/LiberationSans-Italic.woff2') format('woff2'),
+         url('/src/liberation-serif/LiberationSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberation Sans';
+    src: url('/src/liberation-serif/LiberationSans-Bold.woff2') format('woff2'),
+         url('/src/liberation-serif/LiberationSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Liberation Sans';
+    src: url('/src/liberation-serif/LiberationSans-BoldItalic.woff2') format('woff2'),
+         url('/src/liberation-serif/LiberationSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
