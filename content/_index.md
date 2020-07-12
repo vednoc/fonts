@@ -2,4 +2,7 @@
 title = "Fonts"
 +++
 
-Serving open-source fonts from [Vercel](https://vercel.com/)'s global CDN.
+# Fonts
+
+Serving free and open-source fonts from [Vercel](https://vercel.com/)'s global
+CDN.

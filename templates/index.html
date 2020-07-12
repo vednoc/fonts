@@ -11,10 +11,9 @@
     <body>
         <main>
             {% if section.content %}
-                <header>
-                    <h1>{{ section.title }}</h1>
+                <section class="md">
                     <p>{{ section.content | safe }}</p>
-                </header>
+                </section>
             {% endif %}
         </main>
     </body>
