@@ -32,4 +32,17 @@ body {
 Beware of case-sensitivity — font path is _always_ lowercase.
 
 
+### Save bandwidth on mobile devices
+
+Include the following media query in `link` to _only_ load on big resolutions,
+thus making the load time faster on mobile devices.
+
+```html
+<link rel="stylesheet"
+      media="screen and (min-width: 720px)"
+      href="https://fonts.imma.link/to/inter.css">
+</link>
+```
+
+
 [V]: https://vercel.com
