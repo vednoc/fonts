@@ -25,3 +25,26 @@ h1 {
     margin: 2em 0 0;
     font-size: 2em;
 }
+
+h3 { margin-top: 3em }
+
+
+pre {
+    padding: 2em 1em;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+}
+
+pre code { margin: 2em 0 }
+
+code {
+    color: #1dc24e;
+    font-size: 0.6em;
+    font-family: 'Monoid', monospace;
+}
+
+:not(pre) > code::before,
+:not(pre) > code::after {
+    content: '`';
+    color: #666;
+}
