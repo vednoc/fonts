@@ -10,7 +10,7 @@ body {
     background-color: #111;
     font-size: 125%;
     line-height: 1.6;
-    font-family: 'Latin Modern', serif;
+    font-family: 'Latin Modern', 'Georgia', serif;
 }
 
 main {
