@@ -5,7 +5,7 @@ html { box-sizing: border-box }
 :not(select) { scrollbar-color: #333 #222 }
 
 body {
-    margin: 0;
+    margin: 4rem 0;
     color: #bbb;
     background-color: #111;
     font-size: 125%;
@@ -21,13 +21,9 @@ main {
 
 a:link { color: #1dc24e }
 
-h1 {
-    margin: 2em 0 0;
-    font-size: 2em;
-}
+h1 { font-size: 2em }
 
 h3 { margin-top: 3em }
-
 
 pre {
     padding: 2em 1em;
