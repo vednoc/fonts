@@ -1,4 +1,7 @@
-html { box-sizing: border-box }
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
 
 * { box-shadow: inherit }
 
@@ -8,14 +11,14 @@ body {
     margin: 4rem 0;
     color: #bbb;
     background-color: #111;
-    font-size: 125%;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.5;
     font-family: 'Latin Modern', 'Georgia', serif;
 }
 
 main {
     margin: 0 auto;
-    padding: 0 1em;
+    padding: 0 1rem;
     max-width: 40rem;
 }
 
@@ -34,7 +37,7 @@ pre {
 
 code {
     color: #1dc24e;
-    font-size: 0.6em;
+    font-size: 0.75rem;
     font-family: 'Monoid', monospace;
 }
 
