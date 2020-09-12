@@ -42,3 +42,21 @@ code {
     content: '`';
     color: #666;
 }
+
+hr {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #666;
+    border: none;
+}
+
+hr::before { content: '\EB40' }
+
+hr::after {
+    content: '\EB40';
+    transform: translateX(-2.5rem) translateY(-0.35rem) rotate(-25deg);
+    transform-origin: center;
+    position: absolute;
+    opacity: 0.4;
+}
