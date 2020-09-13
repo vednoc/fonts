@@ -52,6 +52,8 @@ h1 { font-size: 2.5rem }
 
 h3 { margin-top: 4rem }
 
+h3 ~ *:not(h3):not(hr) { margin: 1rem }
+
 pre {
     overflow-x: auto;
     padding: 1.5rem 1rem;
