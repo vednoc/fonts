@@ -1,19 +1,31 @@
-html {
+:root {
     box-sizing: border-box;
     font-size: 100%;
+
+    --bg-1: #111111;
+    --bg-2: #1c1c1c;
+    --bg-3: #333333;
+    --bg-4: #444444;
+    --bg-5: #555555;
+    --fg-1: #cccccc;
+    --fg-2: #aaaaaa;
+    --fg-3: #999999;
+    --fg-4: #888888;
+    --fg-5: #777777;
+    --ac-0: #1dc24e;
 }
 
 * { box-shadow: inherit }
 
-:not(select) { scrollbar-color: #333 #222 }
+:not(select) { scrollbar-color: var(--bg-4) var(--bg-2) }
 
 body {
     margin: 4rem 0;
-    color: #bbb;
-    background-color: #111;
-    font-size: 1.2rem;
     line-height: 1.5;
+    font-size: 1.2rem;
     font-family: 'Latin Modern', 'Georgia', serif;
+    color: var(--fg-1);
+    background-color: var(--bg-1);
 }
 
 main {
@@ -22,7 +34,7 @@ main {
     max-width: 40rem;
 }
 
-a:link { color: #1dc24e }
+a:link { color: var(--ac-0) }
 
 h1 { font-size: 2.5rem }
 
@@ -31,12 +43,13 @@ h3 { margin-top: 4rem }
 pre {
     overflow-x: auto;
     padding: 1.5rem 1rem;
-    border-top: 1px solid #444;
-    border-bottom: 1px solid #444;
+    border-top: 1px solid var(--bg-4);
+    border-bottom: 1px solid var(--bg-4);
+    background-color: var(--bg-2) !important;
 }
 
 code {
-    color: #1dc24e;
+    color: var(--ac-0);
     font-size: 0.75rem;
     font-family: 'Monoid', monospace;
 }
@@ -44,14 +57,14 @@ code {
 :not(pre) > code::before,
 :not(pre) > code::after {
     content: '`';
-    color: #666;
+    color: var(--fg-5);
 }
 
 hr {
     margin-top: 4rem;
     text-align: center;
     font-size: 2rem;
-    color: #666;
+    color: var(--fg-3);
     border: none;
 }
 
