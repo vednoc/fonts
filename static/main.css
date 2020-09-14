@@ -13,6 +13,23 @@
     --fg-4: #888888;
     --fg-5: #777777;
     --ac-0: #1dc24e;
+
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-1: #eeeeee;
+        --bg-2: #dddddd;
+        --bg-3: #cccccc;
+        --bg-4: #bbbbbb;
+        --bg-5: #aaaaaa;
+        --fg-1: #111111;
+        --fg-2: #222222;
+        --fg-3: #333333;
+        --fg-4: #444444;
+        --fg-5: #555555;
+        --ac-0: #0b6025;
+    }
 }
 
 * { box-shadow: inherit }
