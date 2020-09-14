@@ -65,6 +65,7 @@ code {
     color: var(--fg-1);
     font-size: 0.75rem;
     font-family: 'Monoid', monospace;
+    font-feature-settings: 'ss01' 1, 'ss07' 1, 'ss08' 1, 'ss09' 1, 'ss10' 1, 'ss11' 1, 'ss15' 1;
 }
 
 :not(pre) > code { color: var(--ac-0) }
