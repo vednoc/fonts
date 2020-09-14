@@ -10,10 +10,12 @@ Serving free and open-source fonts from [Vercel][V]'s global CDN.
 ### How to use?
 
 You can choose between two link types:
-1. `font` — includes _regular_, _italic_, _bold_, and _bold italic_ styles;
-2. `font-all` — includes _all_ possible styles for a specific font.
+1. `font` — includes `4` of the default font styles
+    - Regular, _Italic_, __Bold__, and ___Bold Italic___ styles.
+2. `font-all` — includes default and extra styles for a specific font
+    - <u>Note</u>: Some of the fonts do _not_ have extra styles.
 
-Add a link to the font you want to use, e.g.:
+Add a link to font(s) you want to use in page `<head>`, e.g.:
 
 ```html
 <link rel="stylesheet"
@@ -34,7 +36,7 @@ Beware of case-sensitivity — font path is _always_ lowercase.
 
 ### Save bandwidth on mobile devices
 
-Include the following media query in `link` to _only_ load on big resolutions,
+Include the following media query in `link` to _only_ load on large screens,
 thus making the load time faster on mobile devices.
 
 ```html
@@ -47,8 +49,8 @@ thus making the load time faster on mobile devices.
 
 ### Available fonts
 
-Built-in list of fonts and their documentation/preview is coming soon. However,
-you can see [available fonts][F] in the source repository.
+Built-in list of fonts and their documentation is coming soon. However, you can
+browse [available fonts][F] in the source repository.
 
 Feel free to request and/or contribute new fonts.
 
