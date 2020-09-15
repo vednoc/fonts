@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Page not found{% endblock %}
+
+{% block main %}
+    {% set pageNotFound = get_page(path='404.md') %}
+
+    {% if not section and not page %}
+        <h1>{{ pageNotFound.title }}</h1>
+        <section class="md">
+            {{- pageNotFound.content | safe -}}
+        </section>
+    {% endif %}
+{% endblock %}
