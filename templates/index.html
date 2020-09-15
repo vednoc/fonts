@@ -1,22 +1,9 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Fonts</title>
-        <meta name="description" content="An open-source fonts CDN powered by Vercel.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/to/latin-modern.css" type="text/css"/>
-        <link rel="stylesheet" href="/to/monoid.css" type="text/css"/>
-        <link rel="stylesheet" href="/main.css">
-    </head>
-    <body>
-        <main>
-            {% if section.content %}
-                <section class="md">
-                    <p>{{ section.content | safe }}</p>
-                </section>
-            {% endif %}
-        </main>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block main %}
+    {% if section.content %}
+        <section class="md">
+            <p>{{ section.content | safe }}</p>
+        </section>
+    {% endif %}
+{% endblock %}
