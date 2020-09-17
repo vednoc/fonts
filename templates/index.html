@@ -5,7 +5,7 @@
 {% block main %}
     {% if section.content %}
         <section class="md">
-            <p>{{ section.content | safe }}</p>
+            {{- section.content | safe -}}
         </section>
     {% endif %}
 {% endblock %}
