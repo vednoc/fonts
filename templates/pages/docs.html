@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }}{% endblock %}
+
+{% block main %}
+    {% if section.content %}
+        <section class="md">
+            {{- section.content | safe -}}
+        </section>
+    {% endif %}
+{% endblock %}

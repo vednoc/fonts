@@ -37,7 +37,7 @@
 :not(select) { scrollbar-color: var(--bg-4) var(--bg-2) }
 
 body {
-    margin: 4rem 0;
+    margin: 0;
     line-height: 1.5;
     font-size: 1.2rem;
     font-family: 'Latin Modern', 'Georgia', serif;
@@ -46,7 +46,7 @@ body {
 }
 
 main {
-    margin: 0 auto;
+    margin: 4rem auto;
     padding: 0 1rem;
     max-width: 40rem;
 }
