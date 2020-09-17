@@ -6,6 +6,16 @@
     {% if section.content %}
         <section class="md">
             {{- section.content | safe -}}
+            <ul>
+                {% for page in section.pages %}
+                    <li>
+                        <a href="{{ '/docs/' ~ page.slug ~ '/' }}">
+                            {{- page.title -}}
+                        </a> —
+                        <span>{{ page.extra.type | capitalize }} typeface</span>
+                    </li>
+                {% endfor %}
+            </ul>
         </section>
     {% endif %}
 {% endblock %}
