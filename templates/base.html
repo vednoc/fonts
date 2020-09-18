@@ -12,5 +12,17 @@
     </head>
     <body>
         <main>{%- block main %}{% endblock -%}</main>
+
+        {% if config.extra.debug %}
+            <style type="text/css" media="screen">
+                body > details { margin: 0 auto 4rem; max-width: 60rem }
+                body > details > pre { margin: 0 2rem; line-height: 1 }
+                body > details > summary { margin: 0 2rem 2rem }
+            </style>
+            <details>
+                <summary>Show Tera context.</summary>
+                <pre><code>{{ __tera_context | striptags }}</code></pre>
+            </details>
+        {% endif %}
     </body>
 </html>
