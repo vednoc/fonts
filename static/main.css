@@ -51,6 +51,12 @@ main {
     max-width: 40rem;
 }
 
+nav {
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    max-width: 40rem;
+}
+
 a:link { color: var(--ac-0) }
 
 a:hover { text-decoration: wavy underline }

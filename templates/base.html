@@ -11,6 +11,19 @@
         <link rel="stylesheet" href="/main.css">
     </head>
     <body>
+        <nav>
+            {% if current_path is defined and current_path == "/" %}
+                <a href="/docs">Documentation</a>
+            {% elif current_path is defined and not current_path == "/" %}
+                <a href="/">Home</a>
+                {% if current_path is matching("^docs/[[:alpha:]]") %}
+                    <a href="/docs">Documentation</a>
+                {% endif %}
+            {% else %}
+                <a href="/">Home</a>
+                <a href="/docs">Documentation</a>
+            {% endif %}
+        </nav>
         <main>{%- block main %}{% endblock -%}</main>
 
         {% if config.extra.debug %}
