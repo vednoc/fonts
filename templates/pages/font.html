@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 
+{% import "macros.html" as m %}
+
 {% block title %}{{ page.title }}{% endblock %}
 
 {% block main %}
     {% if page.content %}
         <section class="md">
             {{- page.content | safe -}}
+        </section>
+        <section class="preview">
+            {{- m :: preview() -}}
         </section>
     {% endif %}
 {% endblock %}

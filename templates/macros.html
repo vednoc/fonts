@@ -1,0 +1,44 @@
+{% macro preview() %}
+    {% if page.extra.extra %}
+        <p>This font is also available with <code>{{ page.slug }}-all</code> flag.</p>
+    {% else %}
+        <p>This font is <u>not</u> available with <code>{{ page.slug }}-all</code> flag.</p>
+    {% endif %}
+    {{ self :: lorem() }}
+{% endmacro %}
+
+{% macro lorem() %}
+    <style type="text/css" media="screen">
+        {% if page.extra.type == "monospace" %}
+            .custom { font-family: "{{ page.title }}", monospace }
+        {% elif page.extra.type == "sans-serif" %}
+            .custom { font-family: "{{ page.title }}", sans-serif }
+        {% elif page.extra.type == "serif" %}
+            .custom { font-family: "{{ page.title }}", serif }
+        {% endif %}
+    </style>
+    <div>
+        <h2>Sample text</h2>
+        <p class="custom">
+            <b>Lorem ipsum</b> dolor sit amet, <i>consectetur</i> adipiscing
+            elit, sed do eiusmod tempor <b><i>incididunt</i></b> ut labore et
+            dolore magna aliqua. Imperdiet sed euismod nisi porta.
+            At <i>volutpat diam ut</i> <b>venenatis</b>.
+            <br />
+            <br />
+            Risus at ultrices <i>mi tempus</i> imperdiet nulla malesuada
+            pellentesque elit. Turpis in eu <b>mi bibendum</b>. Risus nullam
+            eget felis eget nunc <b><i>lobortis mattis</i></b> aliquam faucibus.
+            Feugiat sed <i>lectus vestibulum</i> mattis <b>ullamcorper</b>
+            velit.
+        </p>
+        <h3>Font styles</h3>
+        <p>Click on the text below to modify it.</p>
+        <ul class="custom">
+            <li><p contenteditable>Lorem ipsum dolor sit amet.</p></li>
+            <li><p><i contenteditable>Lorem ipsum dolor sit amet.</i></p></li>
+            <li><p><b contenteditable>Lorem ipsum dolor sit amet.</b></p></li>
+            <li><p><b><i contenteditable>Lorem ipsum dolor sit amet.</i></b></p></li>
+        </ul>
+    </div>
+{% endmacro %}
