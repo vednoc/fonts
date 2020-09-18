@@ -6,6 +6,11 @@
     {% if section.content %}
         <section class="md">
             {{- section.content | safe -}}
+            <h2>Font list</h2>
+            <p>Fonts with WIP documentation.
+                All <a href="https://github.com/vednoc/fonts/tree/main/static/to">available
+                fonts</a>.
+            </p>
             <ul>
                 {% for page in section.pages %}
                     <li>
