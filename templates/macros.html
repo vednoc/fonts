@@ -9,6 +9,7 @@
 
 {% macro lorem() %}
     <style type="text/css" media="screen">
+        @import url("/to/{{ page.slug }}.css");
         {% if page.extra.type == "monospace" %}
             .custom { font-family: "{{ page.title }}", monospace }
         {% elif page.extra.type == "sans-serif" %}
