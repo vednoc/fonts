@@ -11,16 +11,22 @@
                 All <a href="https://github.com/vednoc/fonts/tree/main/static/to">available
                 fonts</a>.
             </p>
-            <ul>
-                {% for page in section.pages %}
-                    <li>
-                        <a href="{{ '/docs/' ~ page.slug ~ '/' }}">
-                            {{- page.title -}}
-                        </a> —
-                        <span>{{ page.extra.type | capitalize }} typeface</span>
-                    </li>
-                {% endfor %}
-            </ul>
+            {% for type, fonts in section.pages | group_by(attribute="extra.type") %}
+                <h3>{{ type | title }} typeface</h3>
+
+                {% set count = fonts | length %}
+                <span>{{ count }} {{ type | title }} font{{ count | pluralize }} available.</span>
+
+                <ul>
+                    {% for font in fonts %}
+                        <li>
+                            <a href="{{ '/docs/' ~ font.slug ~ '/' }}">
+                                {{- font.title -}}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
         </section>
     {% endif %}
 {% endblock %}
