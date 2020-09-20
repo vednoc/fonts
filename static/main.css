@@ -73,9 +73,12 @@ a:not([href^='/'])::after {
 
 h1 { font-size: 2.5rem }
 
-h2, h3 { margin-top: 4rem !important }
+h2 { margin-top: 4rem !important }
+h3 { margin-top: 2rem !important }
 
 h2 ~ *:not(h2):not(hr) { margin: 1rem }
+h2 ~ h2 { margin-left: 0rem !important }
+
 h2 ~ h3 ~ *:not(h3):not(hr) { margin: 1rem 2rem }
 
 h3 ~ *:not(h3):not(hr) { margin: 1rem }
