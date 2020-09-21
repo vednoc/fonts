@@ -1,3 +1,11 @@
+{% macro font(to) %}
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="/to/{{ to }}.css"
+    </link>
+{% endmacro %}
+
 {% macro preview() %}
     {% if page.extra.extra %}
         <p>This font is also available with <code>{{ page.slug }}-all</code> flag.</p>
