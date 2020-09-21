@@ -1,8 +1,11 @@
-{% macro font(to) %}
+{% macro font(to, media=true) %}
     <link
         rel="stylesheet"
         type="text/css"
         href="/to/{{ to }}.css"
+        {% if media %}
+            media="screen and (min-width: 720px)">
+        {% endif %}
     </link>
 {% endmacro %}
 
