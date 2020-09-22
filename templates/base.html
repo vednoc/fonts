@@ -23,14 +23,15 @@
         <main>{%- block main %}{% endblock -%}</main>
         <hr />
         {% if config.extra.debug %}
+            {% set context = __tera_context | striptags | replace(from="  ", to="    ") %}
             <style type="text/css" media="screen">
                 body > details { margin: 0 auto 4rem; max-width: 60rem }
                 body > details > pre { margin: 0 2rem; line-height: 1 }
                 body > details > summary { margin: 0 2rem 2rem }
             </style>
-            <details>
-                <summary>Show Tera context.</summary>
-                <pre><code>{{ __tera_context | striptags }}</code></pre>
+            <details open>
+                <summary>Toggle Tera context.</summary>
+                <pre><code>{{- context -}}</code></pre>
             </details>
         {% endif %}
     </body>
