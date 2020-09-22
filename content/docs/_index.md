@@ -46,3 +46,10 @@ thus making the load time faster on mobile devices.
       href="https://fonts.imma.link/to/inter.css">
 </link>
 ```
+
+## Font list
+
+Fonts with WIP documentation. All [available fonts][1].
+
+
+[1]: https://github.com/vednoc/fonts/tree/main/static/to

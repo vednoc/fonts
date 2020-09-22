@@ -6,24 +6,15 @@
     {% if section.content %}
         <section class="md">
             {{- section.content | safe -}}
-            <h2>Font list</h2>
-            <p>Fonts with WIP documentation.
-                All <a href="https://github.com/vednoc/fonts/tree/main/static/to">available
-                fonts</a>.
-            </p>
-            {% for type, fonts in section.pages | group_by(attribute="extra.type") %}
-                <h3>{{ type | title }} typeface</h3>
 
-                {% set count = fonts | length %}
-                <span>{{ count }} {{ type | title }} font{{ count | pluralize }} available.</span>
-
+            {% for fonts in section.subsections | sort %}
+                {% set font = get_section(path=fonts) %}
+                <h3>{{ font.title }} family</h3>
+                {% set count = font.pages | length %}
+                <p>{{ count }} {{ font.title }} font{{ count | pluralize }} available.</p>
                 <ul>
-                    {% for font in fonts %}
-                        <li>
-                            <a href="{{ '/docs/' ~ font.slug ~ '/' }}">
-                                {{- font.title -}}
-                            </a>
-                        </li>
+                    {% for type in font.pages %}
+                        <li><a href="/{{ type.path }}">{{ type.title }}</a></li>
                     {% endfor %}
                 </ul>
             {% endfor %}
