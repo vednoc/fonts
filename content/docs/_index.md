@@ -16,6 +16,9 @@ You can choose between two link types:
 2. `font-all` — includes default and extra styles for a specific font
     - <u>Note</u>: Some of the fonts do _not_ have extra styles.
 
+
+### Quick start
+
 Add a link to font(s) you want to use in page `<head>`, e.g.:
 
 ```html
@@ -36,7 +39,7 @@ Beware of case-sensitivity — font path is _always_ lowercase.
 
 ### Save bandwidth on mobile devices
 
-Include the following media query in `link` to _only_ load on large screens,
+By using a conditional media query, you can choose when to load custom fonts,
 thus making the load time faster on mobile devices.
 
 ```html
