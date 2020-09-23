@@ -21,7 +21,15 @@
     {% else %}
         <p>This font is <u>not</u> available with <code>{{ page.slug }}-all</code> flag.</p>
     {% endif %}
+    {{ self :: usage() }}
     {{ self :: lorem() }}
+{% endmacro %}
+
+{% macro usage() %}
+    {% set one = '<link rel="stylesheet"' | escape %}
+    {% set two = '      href="https://fonts.imma.link/to/' ~ page.slug ~ '.css">' %}
+    <h3>Usage</h3>
+    <pre><code>{{- one ~ '<br/>' ~ two }}</code></pre>
 {% endmacro %}
 
 {% macro lorem() %}
