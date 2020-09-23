@@ -80,9 +80,8 @@ h2 ~ *:not(h2):not(hr) { margin: 1rem }
 h2 ~ h2 { margin-left: 0rem !important }
 
 h2 ~ h3 ~ *:not(h3):not(hr) { margin: 1rem 2rem }
-h2 + p { margin: 1rem !important }
-
-h3 ~ *:not(h3):not(hr) { margin: 1rem }
+h2 ~ p, h2 + p:not(h3), h2 + p:not(h3) + p { margin: 1rem !important }
+h3 ~ p { margin: 1rem 2rem !important }
 
 pre {
     overflow-x: auto;
