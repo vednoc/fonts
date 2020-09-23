@@ -21,7 +21,6 @@ Add a link to font(s) you want to use in page `<head>`, e.g.:
 ```html
 <link rel="stylesheet"
       href="https://fonts.imma.link/to/inter.css">
-</link>
 ```
 
 And then add this to your CSS file:
@@ -44,7 +43,6 @@ thus making the load time faster on mobile devices.
 <link rel="stylesheet"
       media="screen and (min-width: 720px)"
       href="https://fonts.imma.link/to/inter.css">
-</link>
 ```
 
 ## Font list
