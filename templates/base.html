@@ -20,8 +20,10 @@
                 <a href="/docs">Documentation</a>
             {% endif %}
         </nav>
-        <main>{%- block main %}{% endblock -%}</main>
-        <hr />
+        <main>
+            {%- block main %}{% endblock -%}
+            <hr />
+        </main>
         {% if config.extra.debug %}
             {% set context = __tera_context | striptags | replace(from="  ", to="    ") %}
             <style type="text/css" media="screen">

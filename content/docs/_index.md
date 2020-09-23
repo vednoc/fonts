@@ -7,6 +7,7 @@ template = "pages/docs.html"
 
 Work in progress!
 
+---
 
 ## Getting started
 
@@ -47,6 +48,8 @@ thus making the load time faster on mobile devices.
       media="screen and (min-width: 720px)"
       href="https://fonts.imma.link/to/inter.css">
 ```
+
+---
 
 ## Font list
 

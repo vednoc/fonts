@@ -113,14 +113,14 @@ hr {
     font-size: 2rem;
     color: var(--fg-3);
     border: none;
+    border-bottom: 1px solid var(--bg-3);;
 }
 
-hr::before { content: '\EB40' }
+hr:last-child {
+    border: none;
+}
 
-hr::after {
-    content: '\EB40';
-    transform: translateX(-2.5rem) translateY(-0.35rem) rotate(-25deg);
-    transform-origin: center;
-    position: absolute;
-    opacity: 0.4;
+hr:last-child::before {
+    content: '\221E';
+    color: var(--fg-5);
 }
