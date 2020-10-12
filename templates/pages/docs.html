@@ -14,7 +14,7 @@
                 <p>{{ count }} {{ font.title }} font{{ count | pluralize }} available.</p>
                 <ul>
                     {% for type in font.pages %}
-                        <li><a href="/{{ type.path }}">{{ type.title }}</a></li>
+                        <li><a href="{{ type.path }}">{{ type.title }}</a></li>
                     {% endfor %}
                 </ul>
             {% endfor %}
