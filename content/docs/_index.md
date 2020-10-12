@@ -43,7 +43,7 @@ Beware of case-sensitivity — font path is _always_ lowercase.
 By using a conditional media query, you can choose when to load custom fonts,
 thus making the load time faster on mobile devices.
 
-```html
+```html, hl_lines=2
 <link rel="stylesheet"
       media="screen and (min-width: 720px)"
       href="https://fonts.imma.link/to/inter.css">
