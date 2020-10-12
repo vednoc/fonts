@@ -6,6 +6,7 @@
     {% if section.content %}
         <section class="md">
             {{- section.content | safe -}}
+            <p>{{ section.pages | length }} of 10 fonts are documented.</p>
 
             {% for fonts in section.subsections | sort %}
                 {% set font = get_section(path=fonts) %}
