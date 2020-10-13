@@ -18,3 +18,4 @@ title = "Fonts"
 [extra]
 # Put all your custom variables here
 debug = false
+fonts = 10
