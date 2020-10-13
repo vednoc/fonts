@@ -11,11 +11,19 @@
                 {% for h2 in h1.children %}
                     <ul>
                         {{ m :: link_toc(level=h2) }}
-                        <ul>
-                            {% for h3 in h2.children %}
-                                {{ m :: link_toc(level=h3) }}
-                            {% endfor %}
-                        </ul>
+                        {% if h2.title == "Font list" %}
+                            <ul>
+                                <li><a href="#monospace">Monospace</a></li>
+                                <li><a href="#sans-serif">Sans-serif</a></li>
+                                <li><a href="#serif">Serif</a></li>
+                            </ul>
+                        {% else %}
+                            <ul>
+                                {% for h3 in h2.children %}
+                                    {{ m :: link_toc(level=h3) }}
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
                     </ul>
                 {% endfor %}
             {% endfor %}
@@ -29,7 +37,7 @@
 
             {% for fonts in section.subsections | sort %}
                 {% set font = get_section(path=fonts) %}
-                <h3>{{ font.title }} family</h3>
+                <h3 id="{{ font.title | lower }}">{{ font.title }} family</h3>
                 {% set count = font.pages | length %}
                 <p>{{ count }} {{ font.title }} font{{ count | pluralize }} available.</p>
                 <ul>
