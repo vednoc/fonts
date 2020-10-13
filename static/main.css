@@ -61,7 +61,7 @@ a:link { color: var(--ac-0) }
 
 a:hover { text-decoration: wavy underline }
 
-a:not([href^='/'])::after {
+a:not([href^='/']):not([href^='#'])::after {
     content: '';
     width: 0.8rem;
     height: 0.8rem;

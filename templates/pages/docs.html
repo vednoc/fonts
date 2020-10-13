@@ -3,6 +3,25 @@
 {% block title %}{{ section.title }}{% endblock %}
 
 {% block main %}
+    <section class="toc">
+        <i>Table of Contents</i>
+        <ul>
+            {% for h1 in section.toc %}
+                {{ m :: link_toc(level=h1) }}
+                {% for h2 in h1.children %}
+                    <ul>
+                        {{ m :: link_toc(level=h2) }}
+                        <ul>
+                            {% for h3 in h2.children %}
+                                {{ m :: link_toc(level=h3) }}
+                            {% endfor %}
+                        </ul>
+                    </ul>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </section>
+
     {% if section.content %}
         <section class="md">
             {{- section.content | safe -}}

@@ -69,3 +69,11 @@
         </ul>
     </div>
 {% endmacro %}
+
+{% macro link_toc(level) %}
+    <li>
+        <a href='#{{ level.id | safe }}'>
+            {{- level.title -}}
+        </a>
+    </li>
+{% endmacro %}
